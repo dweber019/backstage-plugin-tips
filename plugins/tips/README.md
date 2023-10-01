@@ -4,7 +4,8 @@ Welcome to the Tips plugin!
 
 This plugin will show tips for entities. You can even extend the plugin with your own tips.
 
-![Tips](https://raw.githubusercontent.com/dweber019/backstage-plugin-tips/main/plugins/tips/docs/teaser.png)
+![Closed state](https://raw.githubusercontent.com/dweber019/backstage-plugin-tips/main/plugins/tips/docs/closed-state.png)
+![Open state](https://raw.githubusercontent.com/dweber019/backstage-plugin-tips/main/plugins/tips/docs/open-state.png)
 
 ## Setup
 
