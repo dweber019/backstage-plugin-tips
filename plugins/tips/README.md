@@ -80,3 +80,18 @@ export const apis: AnyApiFactory[] = [
   }),
 ];
 ```
+
+A custom tip has to satisfy the following interface
+
+```tsx
+export interface Tip {
+  content: string | React.ReactElement;
+  title: string;
+  activate: (options: { entity?: Entity }) => boolean;
+}
+```
+
+The tip will be displayed on the entity page when `activate` evaluates to `true`.  
+The `content` of type `string` will be rendered with the builtin Backstage `Markdown` component.
+
+You can have a look at `plugins/tips/src/lib/defaults.tsx` for some inspiration.
