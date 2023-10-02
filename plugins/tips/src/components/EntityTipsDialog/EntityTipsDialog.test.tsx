@@ -24,11 +24,11 @@ import { renderWithEffects, TestApiProvider } from '@backstage/test-utils';
 import React from 'react';
 import { TipsConfig, tipsConfigRef } from '../../config';
 import { EntityTipsDialog } from './EntityTipsDialog';
-import { defaultTips } from '../../lib/defaults';
+import { extraTips } from '../../lib/extraTips';
 
 describe('EntityTipsDialog', () => {
   const mockTipsConfig: jest.Mocked<TipsConfig> = {
-    tips: defaultTips,
+    tips: extraTips,
   };
 
   const links: EntityLink[] = [{ url: 'link' }];
