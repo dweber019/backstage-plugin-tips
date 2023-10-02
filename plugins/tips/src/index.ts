@@ -16,6 +16,7 @@
 
 /** @packageDocumentation */
 
-export { defaultTips } from './lib/defaults';
+export { defaultTips, hasAnnotation, isEntityOfKind } from './lib/defaults';
 export { tipsPlugin, EntityTipsDialog } from './plugin';
 export type { TipsConfig, Tip } from './config';
+export { tipsConfigRef } from './config';
