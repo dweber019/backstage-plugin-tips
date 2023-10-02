@@ -98,10 +98,11 @@ export const EntityTipsDialog = () => {
   };
 
   const tips = useMemo(() => {
+    setActiveStep(0);
     return tipsConfig.tips.filter(tip => tip.activate({ entity }));
   }, [tipsConfig.tips, entity]);
 
-  if (tips.length === 0) {
+  if (tips.length === 0 || !tips[activeStep]) {
     return <></>;
   }
 
