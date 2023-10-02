@@ -15,7 +15,7 @@
  */
 
 import { Entity, EntityLink } from '@backstage/catalog-model';
-import { defaultTips } from './defaults';
+import { extraTips } from './extraTips';
 import { Tip } from '../config';
 
 describe('Defaults tips', () => {
@@ -23,7 +23,7 @@ describe('Defaults tips', () => {
   const documentationAnnotation = { 'backstage.io/techdocs-ref': 'any' };
 
   const getTipActivateByTitle = (title: string) =>
-    defaultTips.find(tip => tip.title === title) as Tip;
+    extraTips.find(tip => tip.title === title) as Tip;
 
   it('should activate on documentation missing', async () => {
     const mockEntity = {

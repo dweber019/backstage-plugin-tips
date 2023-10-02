@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 The Backstage Authors
+ * Copyright 2023 The Backstage Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,11 +14,16 @@
  * limitations under the License.
  */
 
-/** @packageDocumentation */
+import { Entity } from '@backstage/catalog-model';
 
-export { hasAnnotation, isEntityOfKind } from './lib/utils';
-export { extraTips } from './lib/extraTips';
-export { systemModelTips } from './lib/systemModelTips';
-export { tipsPlugin, EntityTipsDialog } from './plugin';
-export type { TipsConfig, Tip } from './config';
-export { tipsConfigRef } from './config';
+/** @public */
+export const hasAnnotation = (entity: Entity, annotation: string) =>
+  Boolean(!!entity.metadata.annotations?.[annotation]);
+
+/** @public */
+export const isEntityOfKind = (
+  entity: Entity,
+  kinds: Array<
+    'api' | 'user' | 'group' | 'component' | 'resource' | 'system' | 'domain'
+  >,
+) => Boolean(kinds.includes(entity.kind.toLowerCase() as any));

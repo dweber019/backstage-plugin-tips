@@ -21,7 +21,8 @@ import {
 } from '@backstage/core-plugin-api';
 import { rootRouteRef } from './routes';
 import { tipsConfigRef } from './config';
-import { defaultTips } from './lib/defaults';
+import { systemModelTips } from './lib/systemModelTips';
+import { extraTips } from './lib/extraTips';
 
 /** @public */
 export const tipsPlugin = createPlugin({
@@ -32,7 +33,7 @@ export const tipsPlugin = createPlugin({
       deps: {},
       factory() {
         return {
-          tips: defaultTips,
+          tips: [...systemModelTips, ...extraTips],
         };
       },
     }),

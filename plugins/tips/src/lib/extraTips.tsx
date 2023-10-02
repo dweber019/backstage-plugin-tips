@@ -1,49 +1,21 @@
-/*
- * Copyright 2023 The Backstage Authors
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import { Tip } from '../config';
+import { hasAnnotation, isEntityOfKind } from './utils';
+import { CodeSnippet } from '@backstage/core-components';
+import React from 'react';
 import {
   ApiEntity,
   ComponentEntity,
-  Entity,
   GroupEntity,
   ResourceEntity,
   SystemEntity,
 } from '@backstage/catalog-model';
-import { CodeSnippet } from '@backstage/core-components';
-import React from 'react';
 
 /** @public */
-export const hasAnnotation = (entity: Entity, annotation: string) =>
-  Boolean(!!entity.metadata.annotations?.[annotation]);
-
-/** @public */
-export const isEntityOfKind = (
-  entity: Entity,
-  kinds: Array<
-    'api' | 'user' | 'group' | 'component' | 'resource' | 'system' | 'domain'
-  >,
-) => Boolean(kinds.includes(entity.kind.toLowerCase() as any));
-
-/** @public */
-export const defaultTips: Tip[] = [
+export const extraTips: Tip[] = [
   {
     title: 'Documentation missing',
     content: `You should have some documentation by adding the annotation \`backstage.io/techdocs-ref\`.  
-    You can find details at [How to understand techdocs-ref annotation values](https://backstage.io/docs/features/techdocs/how-to-guides#how-to-understand-techdocs-ref-annotation-values).
+You can find details at [How to understand techdocs-ref annotation values](https://backstage.io/docs/features/techdocs/how-to-guides#how-to-understand-techdocs-ref-annotation-values).
     `,
     activate: ({ entity }) =>
       !!entity &&
