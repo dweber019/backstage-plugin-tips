@@ -1667,9 +1667,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/cli@npm:^0.22.13":
-  version: 0.22.13
-  resolution: "@backstage/cli@npm:0.22.13"
+"@backstage/cli@npm:^0.22.14":
+  version: 0.22.14
+  resolution: "@backstage/cli@npm:0.22.14"
   dependencies:
     "@backstage/catalog-model": ^1.4.2
     "@backstage/cli-common": ^0.1.12
@@ -1786,7 +1786,7 @@ __metadata:
       optional: true
   bin:
     backstage-cli: bin/backstage-cli
-  checksum: 9326718865dc4f3c1549d6487debf620a67261dd4630a25fdce9ae41a667a3a58b9429fb0f0d90b831a38c07db71ec0d4d8ee7d6fe0c1d6ac29ca423a8106ed6
+  checksum: fc345c5a9507525b3bebb50f91e171139bb8b23444da0b19f937c36acba4cba4c2d900e82fbc31100837b2fd4051437be7e6fb48eabf2fbc0d857857873d215a
   languageName: node
   linkType: hard
 
@@ -2451,7 +2451,7 @@ __metadata:
   resolution: "@dweber019/backstage-plugin-tips@workspace:plugins/tips"
   dependencies:
     "@backstage/catalog-model": ^1.4.2
-    "@backstage/cli": ^0.22.13
+    "@backstage/cli": ^0.22.14
     "@backstage/core-components": ^0.13.5
     "@backstage/core-plugin-api": ^1.6.0
     "@backstage/dev-utils": ^1.0.21
@@ -16752,7 +16752,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root@workspace:."
   dependencies:
-    "@backstage/cli": ^0.22.13
+    "@backstage/cli": ^0.22.14
     "@changesets/cli": ^2.18.0
     "@spotify/prettier-config": ^12.0.0
     "@types/webpack": ^5.28.0
