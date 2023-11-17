@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     bottom: theme.spacing(3),
     right: theme.spacing(3),
-    zIndex: 1,
+    zIndex: 1000,
     [theme.breakpoints.down('xs')]: {
       bottom: theme.spacing(9),
     },
@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     right: theme.spacing(3),
     padding: theme.spacing(3),
     display: 'none',
-    zIndex: 1,
+    zIndex: 1000,
     maxHeight: `calc(100vh - ${theme.spacing(29)}px)`,
     maxWidth: `calc(100vw - ${theme.spacing(34)}px)`,
     [theme.breakpoints.down('xs')]: {
