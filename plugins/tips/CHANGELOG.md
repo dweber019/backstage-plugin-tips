@@ -1,5 +1,11 @@
 # @dweber019/backstage-plugin-tips
 
+## 0.0.5
+
+### Patch Changes
+
+- 9433369: Update Backstage to 1.21.0.
+
 ## 0.0.4
 
 ### Patch Changes
