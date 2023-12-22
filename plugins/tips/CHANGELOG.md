@@ -1,5 +1,11 @@
 # @dweber019/backstage-plugin-tips
 
+## 0.0.6
+
+### Patch Changes
+
+- ebbbe2d: Update package json.
+
 ## 0.0.5
 
 ### Patch Changes
